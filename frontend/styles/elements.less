@@ -1,0 +1,68 @@
+@import "./global.less";
+
+h1{
+    font-size: 40px;
+}
+h3{
+    text-align: center;
+}
+
+p{
+    margin: 0;
+    word-wrap: break-word;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: @primary;
+    position: relative;
+
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: @border-size;
+        background-color: @primary;
+        .transition;
+    }
+    &:hover:after{
+        width: 100%;
+    }
+}
+
+input, select{
+    .bordered; 
+    padding: @padding-s;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+input,
+select,
+.checkbox{
+    background-color: @bg-secondary;
+}
+
+.btn-primary{
+    .bordered;
+    .transition;
+    background-color: lighten(@bg-primary, 5%);
+    color: @primary;
+    padding: @padding-m;
+    margin-top: @padding-m;
+    text-align: center;
+
+    &:hover{
+        background-color: @primary;
+        color: @bg-primary;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "STanovi",
+  "version": "1.0.0",
+  "description": "njuskalo.hr crawler/scraper",
+  "main": "server.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josduj/STanovi.git"
+  },
+  "keywords": [
+    "netlogo",
+    "server"
+  ],
+  "author": "josduj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josduj/STanovi/issues"
+  },
+  "homepage": "https://github.com/josduj/STanovi#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "babel-preset-env": "^1.6.0",
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "express": "^5.0.0-alpha.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.6.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "less-plugin-autoprefix": "^1.5.1",
+    "morgan": "^1.8.2",
+    "qs": "^6.5.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "sort-stream": "^1.0.1",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}

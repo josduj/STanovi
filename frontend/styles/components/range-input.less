@@ -1,0 +1,27 @@
+@import "../../styles/global.less";
+
+.range-input{
+	.flex-row;
+	position: relative;
+
+	.input-label{
+		position: absolute;
+		width: 30px;
+		margin-left: -30px;
+		bottom: 0px;
+	}
+
+	.input-box{
+		width: 50%;
+
+		&:nth-child(even){
+			padding-right: @padding-s / 2;
+		}
+		&:nth-child(odd){
+			padding-left: @padding-s / 2;
+		}
+		
+		label{}
+		input{}
+	}
+}

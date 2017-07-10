@@ -1,0 +1,44 @@
+@import "./global.less";
+
+html, body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.main-container,
+landing,
+filters,
+results{
+	.absolute-center;
+	position: fixed;
+	background-color: @bg-primary;
+	width: 100%;
+	height: 100%;
+}
+
+filters,
+results{
+	animation: zoomIn 0.3s;
+	[class$="-container"]{
+		max-width: 600px;
+	}
+}
+
+results{
+	overflow-y: auto;
+	.results-container{
+		margin: auto;
+	}
+}
+
+.filters-container{
+	padding: @padding-xl;
+	.filters{
+		[class$="-input"]{
+			margin: @padding-s 0px;
+		}
+	}
+}

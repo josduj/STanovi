@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>Stanovi</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="build/css/animations.css">
+	<link rel="stylesheet" href="build/css/components/ad.css">
+	<link rel="stylesheet" href="build/css/components/checkbox-input.css">
+	<link rel="stylesheet" href="build/css/components/loader.css">
+	<link rel="stylesheet" href="build/css/components/range-input.css">
+	<link rel="stylesheet" href="build/css/elements.css">
+	<link rel="stylesheet" href="build/css/global.css">
+	<link rel="stylesheet" href="build/css/main.css">
+	<link rel="stylesheet" href="build/css/mixins.css">
+	<link rel="stylesheet" href="build/css/variables.css">
+	<!-- endinject -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-animate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.3/angular-sanitize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-inview/2.2.0/angular-inview.min.js"></script>
+	
+	<!-- inject:js -->
+	<script src="build/js/app.js"></script>
+	<script src="build/js/ad.js"></script>
+	<script src="build/js/checkboxInput.js"></script>
+	<script src="build/js/loader.js"></script>
+	<script src="build/js/rangeInput.js"></script>
+	<script src="build/js/selectInput.js"></script>
+	<script src="build/js/constants.js"></script>
+	<script src="build/js/filters.js"></script>
+	<script src="build/js/landing.js"></script>
+	<script src="build/js/results.js"></script>
+	<!-- endinject -->
+
+</head>
+<body ng-app="stanovi">
+
+	<div class="main-container" ng-controller="mainCtrl as $ctrl">
+	
+		<landing on-click="showFilters = true"></landing>
+		
+		<filters ng-if="showFilters" on-search="$ctrl.onSearch(filters)"></filters>
+
+		<results ng-if="$ctrl.showResults" filters="$ctrl.filters">
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+@import "../../styles/global.less";
+
+.ad-container{
+	.bordered;
+    .flex-row;
+    background-color: @bg-secondary;
+	padding: @padding-m;
+	margin: @padding-m;
+	animation: slideInUp 0.3s;
+    @media @mobile{
+    	.flex-column;
+    }
+
+	.image{
+		.flex-column;
+		justify-content: space-between;
+		min-width: 200px;
+		height: auto;
+	}
+	.details{
+		.flex-column;
+		width: 100%;
+		margin: 0px 0px 0px @padding-m;
+		@media @mobile{
+			margin: @padding-m 0px 0px 0px;
+		}
+		
+		.title{
+			margin: 0px;
+			border-bottom: @border;
+		}
+
+		.date{
+			text-align: right;
+			font-size: @font-s;
+		}
+		
+		.bottom{
+			.flex-row;
+			margin-top: auto;
+			padding-top: @padding-m;
+			justify-content: space-between;
+			.price{
+				.flex-row;
+				margin-right: @padding-m;
+			}
+		}
+	}
+}
