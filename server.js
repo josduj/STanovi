@@ -5,6 +5,7 @@ const morgan 		= require('morgan')
 const winston 		= require('winston')
 const config 		= require('./backend/appConfig')
 
+require('./backend/responses')
 const app = express()
 
 //logging
