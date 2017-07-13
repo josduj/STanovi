@@ -14,7 +14,7 @@ angular.module('stanovi').component('results', {
 			<loader active="$ctrl.loading > 0" status="$ctrl.status"></loader>
 		</div>
 	`,
-	controller: ['httpService', function(httpService) {
+	controller: ['dataService', function(dataService) {
 		
 		this.loading = 0
 		this.page = 1
@@ -22,7 +22,7 @@ angular.module('stanovi').component('results', {
 
 		this.getResults = () => {
 			this.loading ++
-			httpService.search(this.filters, this.page)
+			dataService.search(this.filters, this.page)
 				.then((res) => {
 					this.hidden += res.data.hidden
 					if(this.hidden)

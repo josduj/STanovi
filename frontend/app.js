@@ -12,9 +12,3 @@ angular
 			this.filters = filters
 		}
 	})
-	.service('httpService', ['$http', function($http){
-		this.search = (filters, page = 1) => {
-			filters.page = page
-			return $http.post('api/search', filters)
-		}
-	}])
