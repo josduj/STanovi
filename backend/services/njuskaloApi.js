@@ -17,7 +17,7 @@ function get(params) {
 		json: true,
 		transform: data =>
 			data.options.map(opt => ({
-				value: opt.id,
+				value: opt.id || params.categoryId,
 				name: opt.label
 			}))
 	})

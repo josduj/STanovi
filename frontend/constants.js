@@ -1,4 +1,7 @@
-angular.module('stanovi').constant('zupanije', [
+angular.module('stanovi').constant('counties', [
+	{	value	: '0',
+		name	: '---'
+	},
 	{	value	: '1150',
 		name	: 'Bjelovarsko-bilogorska'
 	},

@@ -2,18 +2,12 @@ angular.module('stanovi').component('filters', {
 	bindings: {
 		onSearch: '&'
 	},
-	controller: ['zupanije', function(zupanije) {
-		this.zupanije = zupanije
-	}],
 	template: `
 		<div class="filters-container">
 			<h2>Filteri</h2>
 			<div class="filters">
-				<select-input
-					label="Odaberi zupaniju"
-					options="$ctrl.zupanije"
-					selected="filter.locationId">	
-				</select-input>
+				<location-select location="filter.locationId">
+				</location-select>
 				<range-input label="€" range="filter.price"></range-input>
 				<range-input label="m<sup>2</sup>" range="filter.mainArea"></range-input>
 				<checkbox-input
