@@ -4,9 +4,7 @@ const async 	= require('async')
 const qs  		= require('qs')
 const winston 	= require('winston')
 const scraper 	= require('./scraper')
-
-const baseUrl = 'http://www.njuskalo.hr'
-const allowedUserTypes = ['korisnik']
+const config	= require('../appConfig')
 
 const getHtml = url => 
 	request.get({
@@ -18,7 +16,7 @@ const getHtml = url =>
 const getDetails = data =>
 	new Promise((resolve, reject) => {
 		async.each(data.results, (item, cb) => {
-			item.link = baseUrl + item.link
+			item.link = config.baseUrl + item.link
 			getHtml(item.link)
 				.then($ => {
 					Object.assign(item, scraper.parseDetails($))
@@ -34,7 +32,7 @@ const getDetails = data =>
 const filterByUser = (data) => {
 	let total = data.results.length
 	data.results = data.results.filter((item) =>
-		allowedUserTypes.includes(item.user.type)
+		config.allowedUsers.includes(item.user.type)
 	)
 	data.hidden = total - data.results.length
 	return data
@@ -43,7 +41,7 @@ const filterByUser = (data) => {
 const crawl = params => {
 
 	params.adsWithImages = params.adsWithImages ? 1 : 0
-	const url = baseUrl + '/iznajmljivanje-stanova?' + qs.stringify(params)
+	const url = config.baseUrl + '/iznajmljivanje-stanova?' + qs.stringify(params)
 	
 	winston.debug(params, url)
 

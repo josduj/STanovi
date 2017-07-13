@@ -9,7 +9,12 @@ function get(key){
 	return setting
 }
 
+const baseUrl = 'http://www.njuskalo.hr/'
+const allowedUsers = ['korisnik']
+
 module.exports = {
 	port 			: get('PORT'),
-	enableLogging 	: get('ENABLE_LOGGING')
+	enableLogging 	: get('ENABLE_LOGGING'),
+	baseUrl 		: baseUrl,
+	allowedUsers	: allowedUsers
 }
