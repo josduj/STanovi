@@ -11,10 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/josduj/STanovi.git"
   },
-  "keywords": [
-    "netlogo",
-    "server"
-  ],
   "author": "josduj",
   "license": "MIT",
   "bugs": {
