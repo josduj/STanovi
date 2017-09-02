@@ -38,7 +38,7 @@ const filterByUser = (data) => {
 	return data
 }
 
-const crawl = params => {
+const get = params => {
 
 	params.adsWithImages = params.adsWithImages ? 1 : 0
 	const url = config.baseUrl + '/iznajmljivanje-stanova?' + qs.stringify(params)
@@ -54,5 +54,5 @@ const crawl = params => {
 }
 
 module.exports = {
-	crawl
+	get
 }

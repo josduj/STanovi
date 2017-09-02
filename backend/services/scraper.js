@@ -49,7 +49,7 @@ const parseTable = $ => {
 			let e = $(elem)
 			let key 	= e.find('th').text()
 			let value 	= e.find('td').text()
-			winston.debug(key)
+			winston.debug(key, value)
 			details[toCamelCase(key)] = value
 		})
 	return details

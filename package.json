@@ -4,8 +4,7 @@
   "description": "njuskalo.hr crawler/scraper",
   "main": "server.js",
   "scripts": {
-    "start": "gulp",
-    "test": "gulp test"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,15 +17,7 @@
   },
   "homepage": "https://github.com/josduj/STanovi#readme",
   "dependencies": {
-    "async": "^2.5.0",
-    "body-parser": "^1.17.2",
     "cheerio": "^1.0.0-rc.2",
-    "dotenv": "^4.0.0",
-    "express": "^5.0.0-alpha.2",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.0",
-    "gulp-nodemon": "^2.2.1",
-    "morgan": "^1.8.2",
     "qs": "^6.5.0",
     "readline-sync": "^1.4.7",
     "request": "^2.81.0",
