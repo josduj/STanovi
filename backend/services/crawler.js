@@ -4,7 +4,7 @@ const async 	= require('async')
 const qs  		= require('qs')
 const winston 	= require('winston')
 const scraper 	= require('./scraper')
-const config	= require('../appConfig')
+const config	= require('../config')
 
 const getHtml = url => 
 	request.get({

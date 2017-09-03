@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": ">= 7.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josduj/STanovi.git"
@@ -15,9 +18,11 @@
   "bugs": {
     "url": "https://github.com/josduj/STanovi/issues"
   },
-  "homepage": "https://github.com/josduj/STanovi#readme",
+  "homepage": "https://github.com/josduj/STanovi",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^4.0.0",
+    "nodemailer": "^4.1.0",
     "qs": "^6.5.0",
     "readline-sync": "^1.4.7",
     "request": "^2.81.0",

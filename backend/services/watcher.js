@@ -1,10 +1,7 @@
 const winston	= require('winston')
 const crawler	= require('./crawler')
-const notifier	= require('./notifier')
-
-function formatDate (d) {
-	return `${d.getDate()}.${d.getMonth()}.${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`
-}
+const notifier	= require('./notifier/mailer')
+const util		= require('../util')
 
 async function task (query) {
 	let page = 0
@@ -27,16 +24,18 @@ async function task (query) {
 			break task
 	}
 
+	const timestamp = util.formatDate(query.date)
 	if (results.length > 0) {
-		winston.info(`[${formatDate(query.date)}] ${results.length} results found`)
+		winston.info(`[${timestamp}] pronađeno ${results.length} rezultata`)
 		query.date = new Date(results[0].date)
-		notifier(results)
+		notifier.send(results)
 	} else {
-		winston.info(`[${formatDate(query.date)}] no results`)
+		winston.info(`[${timestamp}] nema rezultata`)
 	}
 }
 
-function run (query) {
+function run (query, recipients) {
+	winston.info('tražim...')
 	setInterval(task, query.interval * 60000, query)
 }
 

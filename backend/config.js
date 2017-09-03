@@ -1,4 +1,4 @@
-function get(key, def){
+function get(key, def=null){
 	let setting = process.env[key]
 	
 	if(setting == null)
@@ -19,5 +19,12 @@ const allowedUsers = ['korisnik']
 module.exports = {
 	enableLogging 	: get('ENABLE_LOGGING', false),
 	baseUrl 		: baseUrl,
-	allowedUsers	: allowedUsers
+	allowedUsers	: allowedUsers,
+	gmail: {
+		user		: get('GMAIL_USER'),
+		clientId 	: get('GMAIL_CLIENT_ID'),
+		clientSecret: get('GMAIL_CLIENT_SECRET'),
+		accessToken	: get('GMAIL_ACCESS_TOKEN'),
+		refreshToken: get('GMAIL_REFRESH_TOKEN')
+	}
 }

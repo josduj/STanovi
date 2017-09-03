@@ -1,5 +1,6 @@
+require('dotenv').config()
 const winston	= require('winston')
-const config	= require('./backend/appConfig')
+const config	= require('./backend/config')
 const watcher	= require('./backend/services/watcher')
 const filterSelector = require('./backend/services/filterSelector')
 
@@ -11,7 +12,7 @@ if (config.enableLogging) {
 
 async function main () { 
 	const query = await filterSelector()
-	query.date = new Date('2017-09-01T18:25:40.577Z')
+	query.date = new Date()
 	watcher.run(query)
 }
 

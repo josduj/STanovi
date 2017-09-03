@@ -1,5 +1,5 @@
 const request 	= require('request-promise')
-const config 	= require('../appConfig')
+const config 	= require('../config')
 
 const baseParams = {
 	ctl: 'category_selector',
