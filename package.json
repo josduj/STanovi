@@ -2,9 +2,9 @@
   "name": "STanovi",
   "version": "1.0.0",
   "description": "njuskalo.hr crawler/scraper",
-  "main": "server.js",
+  "main": "lib/main.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node lib/main.js"
   },
   "engines": {
     "node": ">= 7.6.0"
