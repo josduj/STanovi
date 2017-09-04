@@ -2,9 +2,15 @@
   "name": "STanovi",
   "version": "1.0.0",
   "description": "njuskalo.hr crawler/scraper",
-  "main": "lib/main.js",
-  "scripts": {
-    "start": "node lib/main.js"
+  "main": "./lib/watcher.js",
+  "keywords": [
+    "njuskalo",
+    "crawler",
+    "watcher",
+    "scraper"
+  ],
+  "bin": {
+    "stanovi-cli": "./bin/watcher-cli.js"
   },
   "engines": {
     "node": ">= 7.6.0"
