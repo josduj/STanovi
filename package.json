@@ -9,6 +9,9 @@
     "watcher",
     "scraper"
   ],
+  "scripts": {
+    "test": "ENABLE_LOGGING=true ./bin/watcher-cli.js"
+  },
   "bin": {
     "stanovi-cli": "./bin/watcher-cli.js"
   },
